@@ -1,12 +1,6 @@
 # Stepwise Regression with Pyspark
-from pyspark.ml.param.shared import HasInputCol, HasOutputCol, HasLabelCol, \
-    HasFeaturesCol, HasPredictionCol, Params
 from pyspark.ml.base import _FitMultipleIterator
-from pyspark.ml.evaluation import BinaryClassificationEvaluator
-from abc import ABCMeta, abstractclassmethod, abstractproperty
-from pyspark.ml.regression import LinearRegression
 from pyspark.ml.feature import VectorAssembler
-from pyspark.ml.classification import LogisticRegression
 
 class StepwiseRegression():
     def __init__(self, 
@@ -124,6 +118,7 @@ class StepwiseRegression():
 
 # Example                     
 if __name__ == '__main__':
+    from pyspark.ml.classification import LogisticRegression
     lr = LogisticRegression(standardization=True)
     rocauc = StepwiseRegression(
         estimator=lr, 
