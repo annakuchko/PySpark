@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Sep 16 12:55:03 2021
-
-@author: Asus
-"""
-
 import bisect 
 from datetime import date, timedelta 
 import numpy as np 
