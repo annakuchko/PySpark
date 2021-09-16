@@ -1,3 +1,5 @@
+# Custom class for time series cross-valdation with Pyspark
+
 import bisect 
 from datetime import date, timedelta 
 import numpy as np 
