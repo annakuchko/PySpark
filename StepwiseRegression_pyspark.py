@@ -1,6 +1,9 @@
 # Stepwise Regression with Pyspark
+
+import pandas as pd
 from pyspark.ml.base import _FitMultipleIterator
 from pyspark.ml.feature import VectorAssembler
+from pyspark.ml.classification import LogisticRegression
 
 class StepwiseRegression():
     def __init__(self, 
@@ -118,7 +121,6 @@ class StepwiseRegression():
 
 # Example                     
 if __name__ == '__main__':
-    from pyspark.ml.classification import LogisticRegression
     lr = LogisticRegression(standardization=True)
     rocauc = StepwiseRegression(
         estimator=lr, 
@@ -128,5 +130,5 @@ if __name__ == '__main__':
         forward=True,
         verbose=True
         )
-    df_rocauc = rocauc.transform(df_sample)
+    df_rocauc = rocauc.transform(df)
                     
