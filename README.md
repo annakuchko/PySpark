@@ -1,2 +1,2 @@
 # PySpark
-Some pyspark scripts for ML pipelines
+Some useful pyspark scripts for ML pipelines
